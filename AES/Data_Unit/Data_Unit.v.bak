@@ -1,0 +1,322 @@
+module DATA_UNIT (
+  
+  input wire [127:0] KEY ,
+  input wire [31:0] InKEY ,    // key-unit input
+  input wire [31:0] IN ,
+  input wire Sel,       // enryption or decryption
+  input wire clk,
+  input wire [1:0] SHIFTAmt ,    // Barrel shifter mux
+  input wire mux2_SEL ,         // between last row and sbox 
+  input wire [1:0] Datacell_SEL ,  // for each data cell
+  input wire rst,
+  output wire [31:0] sbox ,
+  output wire [31:0] out 
+  
+);
+
+
+wire [7:0]  a00,a01,a02,b00,b01,b02,c00,c01,c02,d00,d01,d02;   // horizontal internal nodes
+wire [7:0]  v0,v1,v2,v3;  // output of barrel shifter
+wire [7:0]  x0,x1,x2,x3;  // input of S-Box
+wire [7:0]  y0,y1,y2,y3;  // output of S-Box
+wire [31:0] m0,m1,m2,m3;  // Inv-Mix columns input to data-cell & m0 for 1st column from left & m1 for the 2nd column from left , etc
+
+
+BSH Sh0(
+.data({y3,y2,y1,y0}),
+.sel(Sel),
+.shiftAmt(SHIFTAmt),
+.f({v3,v2,v1,v0})
+);
+
+
+mux8_2to1 e0(
+.W(d02),
+.X(InKEY[7:0]),
+.mux2_sel(mux2_SEL),
+.mux2_out(x0)
+);
+
+mux8_2to1 e1(
+.W(d01),
+.X(InKEY[15:8]),
+.mux2_sel(mux2_SEL),
+.mux2_out(x1)
+);
+
+mux8_2to1 e2(
+.W(d00),
+.X(InKEY[23:16]),
+.mux2_sel(mux2_SEL),
+.mux2_out(x2)
+);
+
+mux8_2to1 e3(
+.W(out[31:24]),
+.X(InKEY[31:24]),
+.mux2_sel(mux2_SEL),
+.mux2_out(x3)
+);
+
+
+s_box B0 (
+.IN_box(x0),
+.sel(Sel),
+.OUT_box(y0)
+);
+
+s_box B1 (
+.IN_box(x1),
+.sel(Sel),
+.OUT_box(y1)
+);
+
+s_box B2 (
+.IN_box(x2),
+.sel(Sel),
+.OUT_box(y2)
+);
+
+s_box B3 (
+.IN_box(x3),
+.sel(Sel),
+.OUT_box(y3)
+);
+
+
+Data_Cell u00 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[127:120]),
+.mixcolumn_in(m0[31:24]),
+.input_h(a00),
+.input_v(v3),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(out[31:24])
+);
+
+Data_Cell u01 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[95:88]),
+.mixcolumn_in(m1[31:24]),
+.input_h(a01),
+.input_v(v2),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(a00)
+);
+
+Data_Cell u02 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[63:56]),
+.mixcolumn_in(m2[31:24]),
+.input_h(a02),
+.input_v(v1),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(a01)
+);
+
+Data_Cell u03 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[31:24]),
+.mixcolumn_in(m3[31:24]),
+.input_h(IN[31:24]),
+.input_v(v0),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(a02)
+);
+
+Data_Cell u10 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[119:112]),
+.mixcolumn_in(m0[23:16]),
+.input_h(b00),
+.input_v(out[31:24]),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(out[23:16])
+);
+
+Data_Cell u11 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[87:80]),
+.mixcolumn_in(m1[23:16]),
+.input_h(b01),
+.input_v(a00),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(b00)
+);
+
+Data_Cell u12 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[55:48]),
+.mixcolumn_in(m2[23:16]),
+.input_h(b02),
+.input_v(a01),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(b01)
+);
+Data_Cell u13 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[23:16]),
+.mixcolumn_in(m3[23:16]),
+.input_h(IN[23:16]),
+.input_v(a02),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(b02)
+);
+
+
+Data_Cell u20 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[111:104]),
+.mixcolumn_in(m0[15:8]),
+.input_h(c00),
+.input_v(out[23:16]),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(out[15:8])
+);
+
+Data_Cell u21 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[79:72]),
+.mixcolumn_in(m1[15:8]),
+.input_h(c01),
+.input_v(b00),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(c00)
+);
+
+Data_Cell u22 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[47:40]),
+.mixcolumn_in(m2[15:8]),
+.input_h(c02),
+.input_v(b01),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(c01)
+);
+
+Data_Cell u23 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[15:8]),
+.mixcolumn_in(m3[15:8]),
+.input_h(IN[15:8]),
+.input_v(b02),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(c02)
+);
+
+
+Data_Cell u30 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[103:96]),
+.mixcolumn_in(m0[7:0]),
+.input_h(d00),
+.input_v(out[15:8]),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(out[7:0])
+);
+
+Data_Cell u31 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[71:64]),
+.mixcolumn_in(m1[7:0]),
+.input_h(d01),
+.input_v(c00),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(d00)
+);
+
+Data_Cell u32 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[39:32]),
+.mixcolumn_in(m2[7:0]),
+.input_h(d02),
+.input_v(c01),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(d01)
+);
+
+Data_Cell u33 (
+.CLK(clk),
+.RST(rst),
+.key(KEY[7:0]),
+.mixcolumn_in(m3[7:0]),
+.input_h(IN[7:0]),
+.input_v(c02),
+.Datacell_sel(Datacell_SEL),
+.Datacell_op(d02)
+);
+
+//for the first column from left
+Inv_Mixcolumns I0 (        
+.Win(out[31:0]),
+.sel(Sel),
+.Wout(m0)
+);
+
+//for the second column from left
+Inv_Mixcolumns I1 (
+.Win({a00,b00,c00,d00}),
+.sel(Sel),
+.Wout(m1)
+);
+
+//for the third column from left
+Inv_Mixcolumns I2 (
+.Win({a01,b01,c01,d01}),
+.sel(Sel),
+.Wout(m2)
+);
+
+//for the fourth column from left
+Inv_Mixcolumns I3 (
+.Win({a02,b02,c02,d02}),
+.sel(Sel),
+.Wout(m3)
+);
+
+
+assign sbox = {y3,y2,y1,y0};
+/*
+always@(posedge clk or negedge rst)
+begin
+  if(!rst)
+    begin
+    out <= 31'b0;
+  end
+else 
+   begin
+     a02 <= IN[7:0] ;
+     a01 <= a02;
+     a00 <= a01;
+     out[7:0] <= a00;
+     b02 <= IN[15:8] ;
+     b01 <= b02;
+     b00 <= b01;
+     out[15:8] <= b00;
+     c02 <= IN[23:16] ;
+     c01 <= c02;
+     c00 <= c01;
+     out[23:16] <= c00;
+     d02 <= IN[31:24] ;
+     d01 <= d02;
+     d00 <= d01;
+     out[31:24] <= d00;
+  end
+end
+*/
+endmodule

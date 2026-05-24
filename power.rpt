@@ -1,0 +1,2132 @@
+Loading db file '/home/IC/Labs/AES/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+        -verbose
+Design : AES
+Version: K-2015.06
+Date   : Wed Jul 10 05:27:03 2024
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Labs/AES/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+AES                    tsmc13_wl10       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+AES                                    1.70e-02 8.85e-03 2.37e+09    2.398 100.0
+  c2 (AES_Decrypt_N256_Nr14_Nk8)          0.000    0.000 4.89e+08    0.489  20.4
+    addrk2 (addRoundKey_67)               0.000    0.000 1.52e+06 1.52e-03   0.1
+    sb (inverseSubBytes_34)               0.000    0.000 1.93e+07 1.93e-02   0.8
+      sub_Bytes[120].s (inverseSbox_529)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+      sub_Bytes[112].s (inverseSbox_530)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[104].s (inverseSbox_531)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[96].s (inverseSbox_532)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[88].s (inverseSbox_533)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[80].s (inverseSbox_534)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+      sub_Bytes[72].s (inverseSbox_535)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[64].s (inverseSbox_536)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[56].s (inverseSbox_537)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+      sub_Bytes[48].s (inverseSbox_538)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[40].s (inverseSbox_539)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+      sub_Bytes[32].s (inverseSbox_540)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[24].s (inverseSbox_541)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[16].s (inverseSbox_542)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[8].s (inverseSbox_543)    0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[0].s (inverseSbox_544)    0.000    0.000 1.20e+06 1.20e-03   0.1
+    sr (inverseShiftRows_34)              0.000    0.000    0.000    0.000   0.0
+    loop[13].dr (decryptRound_1)          0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_1)             0.000    0.000 8.15e+06 8.15e-03   0.3
+      b (addRoundKey_1)                   0.000    0.000 1.51e+06 1.51e-03   0.1
+      s (inverseSubBytes_1)               0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_1)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (inverseSbox_2)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_3)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[96].s (inverseSbox_4)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_5)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (inverseSbox_6)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[72].s (inverseSbox_7)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (inverseSbox_8)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (inverseSbox_9)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[48].s (inverseSbox_10)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (inverseSbox_11)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (inverseSbox_12)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (inverseSbox_13)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[16].s (inverseSbox_14)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[8].s (inverseSbox_15)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[0].s (inverseSbox_16)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      r (inverseShiftRows_1)              0.000    0.000    0.000    0.000   0.0
+    loop[12].dr (decryptRound_2)          0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_2)             0.000    0.000 8.26e+06 8.26e-03   0.3
+      b (addRoundKey_2)                   0.000    0.000 1.44e+06 1.44e-03   0.1
+      s (inverseSubBytes_2)               0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_17)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (inverseSbox_18)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_19)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[96].s (inverseSbox_20)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_21)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[80].s (inverseSbox_22)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_23)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[64].s (inverseSbox_24)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (inverseSbox_25)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (inverseSbox_26)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[40].s (inverseSbox_27)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[32].s (inverseSbox_28)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[24].s (inverseSbox_29)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (inverseSbox_30)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (inverseSbox_31)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[0].s (inverseSbox_32)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+      r (inverseShiftRows_2)              0.000    0.000    0.000    0.000   0.0
+    loop[11].dr (decryptRound_3)          0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_3)             0.000    0.000 8.34e+06 8.34e-03   0.3
+      b (addRoundKey_3)                   0.000    0.000 1.48e+06 1.48e-03   0.1
+      s (inverseSubBytes_3)               0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (inverseSbox_33)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (inverseSbox_34)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_35)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[96].s (inverseSbox_36)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[88].s (inverseSbox_37)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (inverseSbox_38)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[72].s (inverseSbox_39)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (inverseSbox_40)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[56].s (inverseSbox_41)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[48].s (inverseSbox_42)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (inverseSbox_43)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[32].s (inverseSbox_44)
+                                          0.000    0.000 1.12e+06 1.12e-03   0.0
+        sub_Bytes[24].s (inverseSbox_45)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (inverseSbox_46)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (inverseSbox_47)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (inverseSbox_48)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+      r (inverseShiftRows_3)              0.000    0.000    0.000    0.000   0.0
+    loop[10].dr (decryptRound_4)          0.000    0.000 2.87e+07 2.87e-02   1.2
+      m (inverseMixColumns_4)             0.000    0.000 8.25e+06 8.25e-03   0.3
+      b (addRoundKey_4)                   0.000    0.000 1.43e+06 1.43e-03   0.1
+      s (inverseSubBytes_4)               0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (inverseSbox_49)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (inverseSbox_50)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_51)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[96].s (inverseSbox_52)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[88].s (inverseSbox_53)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[80].s (inverseSbox_54)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_55)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[64].s (inverseSbox_56)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (inverseSbox_57)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[48].s (inverseSbox_58)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (inverseSbox_59)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (inverseSbox_60)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (inverseSbox_61)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[16].s (inverseSbox_62)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[8].s (inverseSbox_63)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[0].s (inverseSbox_64)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+      r (inverseShiftRows_4)              0.000    0.000    0.000    0.000   0.0
+    loop[9].dr (decryptRound_5)           0.000    0.000 2.84e+07 2.84e-02   1.2
+      m (inverseMixColumns_5)             0.000    0.000 8.22e+06 8.22e-03   0.3
+      b (addRoundKey_5)                   0.000    0.000 1.46e+06 1.46e-03   0.1
+      s (inverseSubBytes_5)               0.000    0.000 1.87e+07 1.87e-02   0.8
+        sub_Bytes[120].s (inverseSbox_65)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (inverseSbox_66)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (inverseSbox_67)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (inverseSbox_68)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (inverseSbox_69)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (inverseSbox_70)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (inverseSbox_71)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[64].s (inverseSbox_72)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (inverseSbox_73)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (inverseSbox_74)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[40].s (inverseSbox_75)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[32].s (inverseSbox_76)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (inverseSbox_77)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[16].s (inverseSbox_78)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[8].s (inverseSbox_79)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_80)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+      r (inverseShiftRows_5)              0.000    0.000    0.000    0.000   0.0
+    loop[8].dr (decryptRound_6)           0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_6)             0.000    0.000 8.23e+06 8.23e-03   0.3
+      b (addRoundKey_6)                   0.000    0.000 1.45e+06 1.45e-03   0.1
+      s (inverseSubBytes_6)               0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_81)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[112].s (inverseSbox_82)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_83)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[96].s (inverseSbox_84)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_85)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (inverseSbox_86)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (inverseSbox_87)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[64].s (inverseSbox_88)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[56].s (inverseSbox_89)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (inverseSbox_90)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (inverseSbox_91)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[32].s (inverseSbox_92)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (inverseSbox_93)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (inverseSbox_94)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[8].s (inverseSbox_95)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (inverseSbox_96)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      r (inverseShiftRows_6)              0.000    0.000    0.000    0.000   0.0
+    loop[7].dr (decryptRound_7)           0.000    0.000 2.84e+07 2.84e-02   1.2
+      m (inverseMixColumns_7)             0.000    0.000 8.24e+06 8.24e-03   0.3
+      b (addRoundKey_7)                   0.000    0.000 1.46e+06 1.46e-03   0.1
+      s (inverseSubBytes_7)               0.000    0.000 1.87e+07 1.87e-02   0.8
+        sub_Bytes[120].s (inverseSbox_97)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (inverseSbox_98)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[104].s (inverseSbox_99)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[96].s (inverseSbox_100)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[88].s (inverseSbox_101)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (inverseSbox_102)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (inverseSbox_103)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[64].s (inverseSbox_104)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (inverseSbox_105)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (inverseSbox_106)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (inverseSbox_107)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (inverseSbox_108)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (inverseSbox_109)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[16].s (inverseSbox_110)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[8].s (inverseSbox_111)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[0].s (inverseSbox_112)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+      r (inverseShiftRows_7)              0.000    0.000    0.000    0.000   0.0
+    loop[6].dr (decryptRound_8)           0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_8)             0.000    0.000 8.29e+06 8.29e-03   0.3
+      b (addRoundKey_8)                   0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_8)               0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_113)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (inverseSbox_114)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[104].s (inverseSbox_115)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (inverseSbox_116)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_117)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[80].s (inverseSbox_118)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (inverseSbox_119)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (inverseSbox_120)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[56].s (inverseSbox_121)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[48].s (inverseSbox_122)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (inverseSbox_123)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (inverseSbox_124)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[24].s (inverseSbox_125)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[16].s (inverseSbox_126)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[8].s (inverseSbox_127)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[0].s (inverseSbox_128)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_8)              0.000    0.000    0.000    0.000   0.0
+    loop[5].dr (decryptRound_9)           0.000    0.000 2.87e+07 2.87e-02   1.2
+      m (inverseMixColumns_9)             0.000    0.000 8.25e+06 8.25e-03   0.3
+      b (addRoundKey_9)                   0.000    0.000 1.49e+06 1.49e-03   0.1
+      s (inverseSubBytes_9)               0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (inverseSbox_129)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[112].s (inverseSbox_130)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[104].s (inverseSbox_131)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[96].s (inverseSbox_132)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[88].s (inverseSbox_133)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (inverseSbox_134)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_135)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (inverseSbox_136)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (inverseSbox_137)
+                                          0.000    0.000 1.24e+06 1.24e-03   0.1
+        sub_Bytes[48].s (inverseSbox_138)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (inverseSbox_139)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (inverseSbox_140)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[24].s (inverseSbox_141)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (inverseSbox_142)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[8].s (inverseSbox_143)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (inverseSbox_144)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_9)              0.000    0.000    0.000    0.000   0.0
+    loop[4].dr (decryptRound_10)          0.000    0.000 2.87e+07 2.87e-02   1.2
+      m (inverseMixColumns_10)            0.000    0.000 8.26e+06 8.26e-03   0.3
+      b (addRoundKey_10)                  0.000    0.000 1.44e+06 1.44e-03   0.1
+      s (inverseSubBytes_10)              0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (inverseSbox_145)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (inverseSbox_146)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_147)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[96].s (inverseSbox_148)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_149)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (inverseSbox_150)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_151)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[64].s (inverseSbox_152)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (inverseSbox_153)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[48].s (inverseSbox_154)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (inverseSbox_155)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (inverseSbox_156)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[24].s (inverseSbox_157)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (inverseSbox_158)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (inverseSbox_159)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_160)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_10)             0.000    0.000    0.000    0.000   0.0
+    loop[3].dr (decryptRound_11)          0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_11)            0.000    0.000 8.21e+06 8.21e-03   0.3
+      b (addRoundKey_11)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      s (inverseSubBytes_11)              0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (inverseSbox_161)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (inverseSbox_162)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_163)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[96].s (inverseSbox_164)
+                                          0.000    0.000 1.12e+06 1.12e-03   0.0
+        sub_Bytes[88].s (inverseSbox_165)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (inverseSbox_166)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_167)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[64].s (inverseSbox_168)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (inverseSbox_169)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[48].s (inverseSbox_170)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[40].s (inverseSbox_171)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[32].s (inverseSbox_172)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (inverseSbox_173)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[16].s (inverseSbox_174)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (inverseSbox_175)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_176)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_11)             0.000    0.000    0.000    0.000   0.0
+    loop[2].dr (decryptRound_12)          0.000    0.000 2.88e+07 2.88e-02   1.2
+      m (inverseMixColumns_12)            0.000    0.000 8.23e+06 8.23e-03   0.3
+      b (addRoundKey_12)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_12)              0.000    0.000 1.91e+07 1.91e-02   0.8
+        sub_Bytes[120].s (inverseSbox_177)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (inverseSbox_178)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[104].s (inverseSbox_179)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[96].s (inverseSbox_180)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (inverseSbox_181)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[80].s (inverseSbox_182)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[72].s (inverseSbox_183)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (inverseSbox_184)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[56].s (inverseSbox_185)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[48].s (inverseSbox_186)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[40].s (inverseSbox_187)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[32].s (inverseSbox_188)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (inverseSbox_189)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[16].s (inverseSbox_190)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[8].s (inverseSbox_191)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[0].s (inverseSbox_192)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      r (inverseShiftRows_12)             0.000    0.000    0.000    0.000   0.0
+    loop[1].dr (decryptRound_13)          0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_13)            0.000    0.000 8.31e+06 8.31e-03   0.3
+      b (addRoundKey_13)                  0.000    0.000 1.44e+06 1.44e-03   0.1
+      s (inverseSubBytes_13)              0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (inverseSbox_193)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[112].s (inverseSbox_194)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_195)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[96].s (inverseSbox_196)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (inverseSbox_197)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[80].s (inverseSbox_198)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[72].s (inverseSbox_199)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (inverseSbox_200)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (inverseSbox_201)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (inverseSbox_202)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (inverseSbox_203)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (inverseSbox_204)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[24].s (inverseSbox_205)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[16].s (inverseSbox_206)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[8].s (inverseSbox_207)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (inverseSbox_208)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_13)             0.000    0.000    0.000    0.000   0.0
+    addrk1 (addRoundKey_68)               0.000    0.000 1.46e+06 1.46e-03   0.1
+    ke (keyExpansion_nk8_nr14_1)          0.000    0.000 9.51e+07 9.51e-02   4.0
+  b2 (AES_Decrypt_N192_Nr12_Nk6)          0.000    0.000 4.03e+08    0.403  16.8
+    addrk2 (addRoundKey_69)               0.000    0.000 1.52e+06 1.52e-03   0.1
+    sb (inverseSubBytes_35)               0.000    0.000 1.93e+07 1.93e-02   0.8
+      sub_Bytes[120].s (inverseSbox_545)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+      sub_Bytes[112].s (inverseSbox_546)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[104].s (inverseSbox_547)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[96].s (inverseSbox_548)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[88].s (inverseSbox_549)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[80].s (inverseSbox_550)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+      sub_Bytes[72].s (inverseSbox_551)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[64].s (inverseSbox_552)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[56].s (inverseSbox_553)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[48].s (inverseSbox_554)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[40].s (inverseSbox_555)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[32].s (inverseSbox_556)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[24].s (inverseSbox_557)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[16].s (inverseSbox_558)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[8].s (inverseSbox_559)    0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[0].s (inverseSbox_560)    0.000    0.000 1.20e+06 1.20e-03   0.1
+    sr (inverseShiftRows_35)              0.000    0.000    0.000    0.000   0.0
+    loop[11].dr (decryptRound_14)         0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_14)            0.000    0.000 8.15e+06 8.15e-03   0.3
+      b (addRoundKey_14)                  0.000    0.000 1.50e+06 1.50e-03   0.1
+      s (inverseSubBytes_14)              0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_209)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (inverseSbox_210)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_211)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[96].s (inverseSbox_212)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_213)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (inverseSbox_214)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[72].s (inverseSbox_215)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (inverseSbox_216)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (inverseSbox_217)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[48].s (inverseSbox_218)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (inverseSbox_219)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (inverseSbox_220)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (inverseSbox_221)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[16].s (inverseSbox_222)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[8].s (inverseSbox_223)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (inverseSbox_224)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+      r (inverseShiftRows_14)             0.000    0.000    0.000    0.000   0.0
+    loop[10].dr (decryptRound_15)         0.000    0.000 2.87e+07 2.87e-02   1.2
+      m (inverseMixColumns_15)            0.000    0.000 8.24e+06 8.24e-03   0.3
+      b (addRoundKey_15)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      s (inverseSubBytes_15)              0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (inverseSbox_225)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (inverseSbox_226)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[104].s (inverseSbox_227)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[96].s (inverseSbox_228)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[88].s (inverseSbox_229)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (inverseSbox_230)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (inverseSbox_231)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (inverseSbox_232)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (inverseSbox_233)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[48].s (inverseSbox_234)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (inverseSbox_235)
+                                          0.000    0.000 1.24e+06 1.24e-03   0.1
+        sub_Bytes[32].s (inverseSbox_236)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[24].s (inverseSbox_237)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (inverseSbox_238)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (inverseSbox_239)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[0].s (inverseSbox_240)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+      r (inverseShiftRows_15)             0.000    0.000    0.000    0.000   0.0
+    loop[9].dr (decryptRound_16)          0.000    0.000 2.84e+07 2.84e-02   1.2
+      m (inverseMixColumns_16)            0.000    0.000 8.27e+06 8.27e-03   0.3
+      b (addRoundKey_16)                  0.000    0.000 1.49e+06 1.49e-03   0.1
+      s (inverseSubBytes_16)              0.000    0.000 1.86e+07 1.86e-02   0.8
+        sub_Bytes[120].s (inverseSbox_241)
+                                          0.000    0.000 1.12e+06 1.12e-03   0.0
+        sub_Bytes[112].s (inverseSbox_242)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_243)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[96].s (inverseSbox_244)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[88].s (inverseSbox_245)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (inverseSbox_246)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (inverseSbox_247)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (inverseSbox_248)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[56].s (inverseSbox_249)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[48].s (inverseSbox_250)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[40].s (inverseSbox_251)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[32].s (inverseSbox_252)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (inverseSbox_253)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[16].s (inverseSbox_254)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (inverseSbox_255)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[0].s (inverseSbox_256)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_16)             0.000    0.000    0.000    0.000   0.0
+    loop[8].dr (decryptRound_17)          0.000    0.000 2.87e+07 2.87e-02   1.2
+      m (inverseMixColumns_17)            0.000    0.000 8.18e+06 8.18e-03   0.3
+      b (addRoundKey_17)                  0.000    0.000 1.48e+06 1.48e-03   0.1
+      s (inverseSubBytes_17)              0.000    0.000 1.91e+07 1.91e-02   0.8
+        sub_Bytes[120].s (inverseSbox_257)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (inverseSbox_258)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (inverseSbox_259)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (inverseSbox_260)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_261)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[80].s (inverseSbox_262)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (inverseSbox_263)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (inverseSbox_264)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[56].s (inverseSbox_265)
+                                          0.000    0.000 1.24e+06 1.24e-03   0.1
+        sub_Bytes[48].s (inverseSbox_266)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[40].s (inverseSbox_267)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (inverseSbox_268)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (inverseSbox_269)
+                                          0.000    0.000 1.24e+06 1.24e-03   0.1
+        sub_Bytes[16].s (inverseSbox_270)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[8].s (inverseSbox_271)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[0].s (inverseSbox_272)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+      r (inverseShiftRows_17)             0.000    0.000    0.000    0.000   0.0
+    loop[7].dr (decryptRound_18)          0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_18)            0.000    0.000 8.27e+06 8.27e-03   0.3
+      b (addRoundKey_18)                  0.000    0.000 1.49e+06 1.49e-03   0.1
+      s (inverseSubBytes_18)              0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_273)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[112].s (inverseSbox_274)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[104].s (inverseSbox_275)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (inverseSbox_276)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_277)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (inverseSbox_278)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[72].s (inverseSbox_279)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (inverseSbox_280)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[56].s (inverseSbox_281)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[48].s (inverseSbox_282)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[40].s (inverseSbox_283)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[32].s (inverseSbox_284)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[24].s (inverseSbox_285)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[16].s (inverseSbox_286)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (inverseSbox_287)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_288)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+      r (inverseShiftRows_18)             0.000    0.000    0.000    0.000   0.0
+    loop[6].dr (decryptRound_19)          0.000    0.000 2.84e+07 2.84e-02   1.2
+      m (inverseMixColumns_19)            0.000    0.000 8.19e+06 8.19e-03   0.3
+      b (addRoundKey_19)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_19)              0.000    0.000 1.87e+07 1.87e-02   0.8
+        sub_Bytes[120].s (inverseSbox_289)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[112].s (inverseSbox_290)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_291)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (inverseSbox_292)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (inverseSbox_293)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (inverseSbox_294)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_295)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (inverseSbox_296)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[56].s (inverseSbox_297)
+                                          0.000    0.000 1.12e+06 1.12e-03   0.0
+        sub_Bytes[48].s (inverseSbox_298)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (inverseSbox_299)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (inverseSbox_300)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[24].s (inverseSbox_301)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[16].s (inverseSbox_302)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (inverseSbox_303)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_304)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      r (inverseShiftRows_19)             0.000    0.000    0.000    0.000   0.0
+    loop[5].dr (decryptRound_20)          0.000    0.000 2.88e+07 2.88e-02   1.2
+      m (inverseMixColumns_20)            0.000    0.000 8.19e+06 8.19e-03   0.3
+      b (addRoundKey_20)                  0.000    0.000 1.48e+06 1.48e-03   0.1
+      s (inverseSubBytes_20)              0.000    0.000 1.91e+07 1.91e-02   0.8
+        sub_Bytes[120].s (inverseSbox_305)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[112].s (inverseSbox_306)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[104].s (inverseSbox_307)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[96].s (inverseSbox_308)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[88].s (inverseSbox_309)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[80].s (inverseSbox_310)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[72].s (inverseSbox_311)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (inverseSbox_312)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[56].s (inverseSbox_313)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (inverseSbox_314)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (inverseSbox_315)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[32].s (inverseSbox_316)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (inverseSbox_317)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[16].s (inverseSbox_318)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[8].s (inverseSbox_319)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[0].s (inverseSbox_320)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      r (inverseShiftRows_20)             0.000    0.000    0.000    0.000   0.0
+    loop[4].dr (decryptRound_21)          0.000    0.000 2.88e+07 2.88e-02   1.2
+      m (inverseMixColumns_21)            0.000    0.000 8.27e+06 8.27e-03   0.3
+      b (addRoundKey_21)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_21)              0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (inverseSbox_321)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[112].s (inverseSbox_322)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_323)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[96].s (inverseSbox_324)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (inverseSbox_325)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (inverseSbox_326)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_327)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[64].s (inverseSbox_328)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[56].s (inverseSbox_329)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (inverseSbox_330)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (inverseSbox_331)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (inverseSbox_332)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (inverseSbox_333)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[16].s (inverseSbox_334)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (inverseSbox_335)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (inverseSbox_336)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      r (inverseShiftRows_21)             0.000    0.000    0.000    0.000   0.0
+    loop[3].dr (decryptRound_22)          0.000    0.000 2.87e+07 2.87e-02   1.2
+      m (inverseMixColumns_22)            0.000    0.000 8.26e+06 8.26e-03   0.3
+      b (addRoundKey_22)                  0.000    0.000 1.44e+06 1.44e-03   0.1
+      s (inverseSubBytes_22)              0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (inverseSbox_337)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[112].s (inverseSbox_338)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_339)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (inverseSbox_340)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[88].s (inverseSbox_341)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (inverseSbox_342)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[72].s (inverseSbox_343)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (inverseSbox_344)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[56].s (inverseSbox_345)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (inverseSbox_346)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (inverseSbox_347)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (inverseSbox_348)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (inverseSbox_349)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[16].s (inverseSbox_350)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (inverseSbox_351)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[0].s (inverseSbox_352)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      r (inverseShiftRows_22)             0.000    0.000    0.000    0.000   0.0
+    loop[2].dr (decryptRound_23)          0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_23)            0.000    0.000 8.25e+06 8.25e-03   0.3
+      b (addRoundKey_23)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      s (inverseSubBytes_23)              0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_353)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[112].s (inverseSbox_354)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_355)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (inverseSbox_356)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_357)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[80].s (inverseSbox_358)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[72].s (inverseSbox_359)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (inverseSbox_360)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[56].s (inverseSbox_361)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (inverseSbox_362)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[40].s (inverseSbox_363)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[32].s (inverseSbox_364)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (inverseSbox_365)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[16].s (inverseSbox_366)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (inverseSbox_367)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (inverseSbox_368)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      r (inverseShiftRows_23)             0.000    0.000    0.000    0.000   0.0
+    loop[1].dr (decryptRound_24)          0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_24)            0.000    0.000 8.30e+06 8.30e-03   0.3
+      b (addRoundKey_24)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_24)              0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (inverseSbox_369)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[112].s (inverseSbox_370)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (inverseSbox_371)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[96].s (inverseSbox_372)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (inverseSbox_373)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (inverseSbox_374)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (inverseSbox_375)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (inverseSbox_376)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[56].s (inverseSbox_377)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[48].s (inverseSbox_378)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[40].s (inverseSbox_379)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (inverseSbox_380)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (inverseSbox_381)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[16].s (inverseSbox_382)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (inverseSbox_383)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (inverseSbox_384)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      r (inverseShiftRows_24)             0.000    0.000    0.000    0.000   0.0
+    addrk1 (addRoundKey_70)               0.000    0.000 1.49e+06 1.49e-03   0.1
+    ke (keyExpansion_nk6_nr12_1)          0.000    0.000 6.58e+07 6.58e-02   2.7
+  a2 (AES_Decrypt)                        0.000    0.000 3.55e+08    0.355  14.8
+    addrk2 (addRoundKey_71)               0.000    0.000 1.52e+06 1.52e-03   0.1
+    sb (inverseSubBytes_0)                0.000    0.000 1.93e+07 1.93e-02   0.8
+      sub_Bytes[120].s (inverseSbox_561)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+      sub_Bytes[112].s (inverseSbox_562)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[104].s (inverseSbox_563)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[96].s (inverseSbox_564)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[88].s (inverseSbox_565)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[80].s (inverseSbox_566)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+      sub_Bytes[72].s (inverseSbox_567)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[64].s (inverseSbox_568)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[56].s (inverseSbox_569)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+      sub_Bytes[48].s (inverseSbox_570)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[40].s (inverseSbox_571)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[32].s (inverseSbox_572)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[24].s (inverseSbox_573)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[16].s (inverseSbox_574)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[8].s (inverseSbox_575)    0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[0].s (inverseSbox_0)      0.000    0.000 1.20e+06 1.20e-03   0.1
+    sr (inverseShiftRows_0)               0.000    0.000    0.000    0.000   0.0
+    loop[9].dr (decryptRound_25)          0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_25)            0.000    0.000 8.15e+06 8.15e-03   0.3
+      b (addRoundKey_25)                  0.000    0.000 1.44e+06 1.44e-03   0.1
+      s (inverseSubBytes_25)              0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (inverseSbox_385)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (inverseSbox_386)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[104].s (inverseSbox_387)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[96].s (inverseSbox_388)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[88].s (inverseSbox_389)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (inverseSbox_390)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (inverseSbox_391)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[64].s (inverseSbox_392)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[56].s (inverseSbox_393)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (inverseSbox_394)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[40].s (inverseSbox_395)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[32].s (inverseSbox_396)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (inverseSbox_397)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[16].s (inverseSbox_398)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[8].s (inverseSbox_399)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (inverseSbox_400)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+      r (inverseShiftRows_25)             0.000    0.000    0.000    0.000   0.0
+    loop[8].dr (decryptRound_26)          0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_26)            0.000    0.000 8.30e+06 8.30e-03   0.3
+      b (addRoundKey_26)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      s (inverseSubBytes_26)              0.000    0.000 1.87e+07 1.87e-02   0.8
+        sub_Bytes[120].s (inverseSbox_401)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (inverseSbox_402)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_403)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (inverseSbox_404)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (inverseSbox_405)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (inverseSbox_406)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_407)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[64].s (inverseSbox_408)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (inverseSbox_409)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[48].s (inverseSbox_410)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (inverseSbox_411)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (inverseSbox_412)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[24].s (inverseSbox_413)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[16].s (inverseSbox_414)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (inverseSbox_415)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[0].s (inverseSbox_416)
+                                          0.000    0.000 1.12e+06 1.12e-03   0.0
+      r (inverseShiftRows_26)             0.000    0.000    0.000    0.000   0.0
+    loop[7].dr (decryptRound_27)          0.000    0.000 2.87e+07 2.87e-02   1.2
+      m (inverseMixColumns_27)            0.000    0.000 8.22e+06 8.22e-03   0.3
+      b (addRoundKey_27)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      s (inverseSubBytes_27)              0.000    0.000 1.91e+07 1.91e-02   0.8
+        sub_Bytes[120].s (inverseSbox_417)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[112].s (inverseSbox_418)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_419)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[96].s (inverseSbox_420)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[88].s (inverseSbox_421)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[80].s (inverseSbox_422)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_423)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[64].s (inverseSbox_424)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[56].s (inverseSbox_425)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[48].s (inverseSbox_426)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (inverseSbox_427)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[32].s (inverseSbox_428)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[24].s (inverseSbox_429)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[16].s (inverseSbox_430)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[8].s (inverseSbox_431)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[0].s (inverseSbox_432)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_27)             0.000    0.000    0.000    0.000   0.0
+    loop[6].dr (decryptRound_28)          0.000    0.000 2.88e+07 2.88e-02   1.2
+      m (inverseMixColumns_28)            0.000    0.000 8.23e+06 8.23e-03   0.3
+      b (addRoundKey_28)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      s (inverseSubBytes_28)              0.000    0.000 1.91e+07 1.91e-02   0.8
+        sub_Bytes[120].s (inverseSbox_433)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[112].s (inverseSbox_434)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[104].s (inverseSbox_435)
+                                          0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[96].s (inverseSbox_436)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[88].s (inverseSbox_437)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[80].s (inverseSbox_438)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[72].s (inverseSbox_439)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (inverseSbox_440)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (inverseSbox_441)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (inverseSbox_442)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (inverseSbox_443)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (inverseSbox_444)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[24].s (inverseSbox_445)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[16].s (inverseSbox_446)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[8].s (inverseSbox_447)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (inverseSbox_448)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      r (inverseShiftRows_28)             0.000    0.000    0.000    0.000   0.0
+    loop[5].dr (decryptRound_29)          0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_29)            0.000    0.000 8.23e+06 8.23e-03   0.3
+      b (addRoundKey_29)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      s (inverseSubBytes_29)              0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (inverseSbox_449)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[112].s (inverseSbox_450)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (inverseSbox_451)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (inverseSbox_452)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (inverseSbox_453)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (inverseSbox_454)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_455)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (inverseSbox_456)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (inverseSbox_457)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (inverseSbox_458)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[40].s (inverseSbox_459)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (inverseSbox_460)
+                                          0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[24].s (inverseSbox_461)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[16].s (inverseSbox_462)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (inverseSbox_463)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (inverseSbox_464)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      r (inverseShiftRows_29)             0.000    0.000    0.000    0.000   0.0
+    loop[4].dr (decryptRound_30)          0.000    0.000 2.84e+07 2.84e-02   1.2
+      m (inverseMixColumns_30)            0.000    0.000 8.24e+06 8.24e-03   0.3
+      b (addRoundKey_30)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      s (inverseSubBytes_30)              0.000    0.000 1.87e+07 1.87e-02   0.8
+        sub_Bytes[120].s (inverseSbox_465)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (inverseSbox_466)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_467)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (inverseSbox_468)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[88].s (inverseSbox_469)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[80].s (inverseSbox_470)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[72].s (inverseSbox_471)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (inverseSbox_472)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (inverseSbox_473)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (inverseSbox_474)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[40].s (inverseSbox_475)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (inverseSbox_476)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (inverseSbox_477)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (inverseSbox_478)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[8].s (inverseSbox_479)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_480)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+      r (inverseShiftRows_30)             0.000    0.000    0.000    0.000   0.0
+    loop[3].dr (decryptRound_31)          0.000    0.000 2.85e+07 2.85e-02   1.2
+      m (inverseMixColumns_31)            0.000    0.000 8.20e+06 8.20e-03   0.3
+      b (addRoundKey_31)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_31)              0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (inverseSbox_481)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (inverseSbox_482)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[104].s (inverseSbox_483)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (inverseSbox_484)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (inverseSbox_485)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (inverseSbox_486)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (inverseSbox_487)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[64].s (inverseSbox_488)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (inverseSbox_489)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (inverseSbox_490)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (inverseSbox_491)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (inverseSbox_492)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[24].s (inverseSbox_493)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[16].s (inverseSbox_494)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[8].s (inverseSbox_495)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_496)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+      r (inverseShiftRows_31)             0.000    0.000    0.000    0.000   0.0
+    loop[2].dr (decryptRound_32)          0.000    0.000 2.84e+07 2.84e-02   1.2
+      m (inverseMixColumns_32)            0.000    0.000 8.18e+06 8.18e-03   0.3
+      b (addRoundKey_32)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_32)              0.000    0.000 1.87e+07 1.87e-02   0.8
+        sub_Bytes[120].s (inverseSbox_497)
+                                          0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[112].s (inverseSbox_498)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (inverseSbox_499)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[96].s (inverseSbox_500)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[88].s (inverseSbox_501)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (inverseSbox_502)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (inverseSbox_503)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[64].s (inverseSbox_504)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[56].s (inverseSbox_505)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (inverseSbox_506)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (inverseSbox_507)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (inverseSbox_508)
+                                          0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (inverseSbox_509)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (inverseSbox_510)
+                                          0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[8].s (inverseSbox_511)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (inverseSbox_512)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_32)             0.000    0.000    0.000    0.000   0.0
+    loop[1].dr (decryptRound_0)           0.000    0.000 2.86e+07 2.86e-02   1.2
+      m (inverseMixColumns_0)             0.000    0.000 8.30e+06 8.30e-03   0.3
+      b (addRoundKey_33)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      s (inverseSubBytes_33)              0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (inverseSbox_513)
+                                          0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (inverseSbox_514)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[104].s (inverseSbox_515)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (inverseSbox_516)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[88].s (inverseSbox_517)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[80].s (inverseSbox_518)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[72].s (inverseSbox_519)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (inverseSbox_520)
+                                          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (inverseSbox_521)
+                                          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (inverseSbox_522)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[40].s (inverseSbox_523)
+                                          0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[32].s (inverseSbox_524)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (inverseSbox_525)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (inverseSbox_526)
+                                          0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[8].s (inverseSbox_527)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (inverseSbox_528)
+                                          0.000    0.000 1.17e+06 1.17e-03   0.0
+      r (inverseShiftRows_33)             0.000    0.000    0.000    0.000   0.0
+    addrk1 (addRoundKey_72)               0.000    0.000 1.48e+06 1.48e-03   0.1
+    ke (keyExpansion_nk4_nr10_1)          0.000    0.000 7.58e+07 7.58e-02   3.2
+  c (AES_Encrypt_N256_Nr14_Nk8)           0.000    0.000 4.40e+08    0.440  18.3
+    addrk2 (addRoundKey_73)               0.000    0.000 1.46e+06 1.46e-03   0.1
+    sr (shiftRows_34)                     0.000    0.000    0.000    0.000   0.0
+    sb (subBytes_34)                      0.000    0.000 1.87e+07 1.87e-02   0.8
+      sub_Bytes[120].s (sbox_529)         0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[112].s (sbox_530)         0.000    0.000 1.20e+06 1.20e-03   0.1
+      sub_Bytes[104].s (sbox_531)         0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[96].s (sbox_532)          0.000    0.000 1.17e+06 1.17e-03   0.0
+      sub_Bytes[88].s (sbox_533)          0.000    0.000 1.17e+06 1.17e-03   0.0
+      sub_Bytes[80].s (sbox_534)          0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[72].s (sbox_535)          0.000    0.000 1.14e+06 1.14e-03   0.0
+      sub_Bytes[64].s (sbox_536)          0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[56].s (sbox_537)          0.000    0.000 1.15e+06 1.15e-03   0.0
+      sub_Bytes[48].s (sbox_538)          0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[40].s (sbox_539)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[32].s (sbox_540)          0.000    0.000 1.12e+06 1.12e-03   0.0
+      sub_Bytes[24].s (sbox_541)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[16].s (sbox_542)          0.000    0.000 1.14e+06 1.14e-03   0.0
+      sub_Bytes[8].s (sbox_543)           0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[0].s (sbox_544)           0.000    0.000 1.20e+06 1.20e-03   0.1
+    loop[13].er (encryptRound_1)          0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_34)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      m (mixColumns_1)                    0.000    0.000 4.42e+06 4.42e-03   0.2
+      r (shiftRows_1)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_1)                      0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_1)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (sbox_2)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[104].s (sbox_3)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (sbox_4)          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (sbox_5)          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (sbox_6)          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[72].s (sbox_7)          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[64].s (sbox_8)          0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (sbox_9)          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (sbox_10)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (sbox_11)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[32].s (sbox_12)         0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (sbox_13)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (sbox_14)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (sbox_15)          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_16)          0.000    0.000 1.16e+06 1.16e-03   0.0
+    loop[12].er (encryptRound_2)          0.000    0.000 2.49e+07 2.49e-02   1.0
+      b (addRoundKey_35)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_2)                    0.000    0.000 4.48e+06 4.48e-03   0.2
+      r (shiftRows_2)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_2)                      0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (sbox_17)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[112].s (sbox_18)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (sbox_19)        0.000    0.000 1.24e+06 1.24e-03   0.1
+        sub_Bytes[96].s (sbox_20)         0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[88].s (sbox_21)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (sbox_22)         0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[72].s (sbox_23)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[64].s (sbox_24)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_25)         0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (sbox_26)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (sbox_27)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[32].s (sbox_28)         0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (sbox_29)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[16].s (sbox_30)         0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[8].s (sbox_31)          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_32)          0.000    0.000 1.16e+06 1.16e-03   0.0
+    loop[11].er (encryptRound_3)          0.000    0.000 2.50e+07 2.50e-02   1.0
+      b (addRoundKey_36)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_3)                    0.000    0.000 4.49e+06 4.49e-03   0.2
+      r (shiftRows_3)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_3)                      0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (sbox_33)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[112].s (sbox_34)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[104].s (sbox_35)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[96].s (sbox_36)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[88].s (sbox_37)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (sbox_38)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (sbox_39)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[64].s (sbox_40)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[56].s (sbox_41)         0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (sbox_42)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (sbox_43)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (sbox_44)         0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[24].s (sbox_45)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_46)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[8].s (sbox_47)          0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (sbox_48)          0.000    0.000 1.18e+06 1.18e-03   0.0
+    loop[10].er (encryptRound_4)          0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_37)                  0.000    0.000 1.43e+06 1.43e-03   0.1
+      m (mixColumns_4)                    0.000    0.000 4.51e+06 4.51e-03   0.2
+      r (shiftRows_4)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_4)                      0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_49)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (sbox_50)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (sbox_51)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_52)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (sbox_53)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (sbox_54)         0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[72].s (sbox_55)         0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[64].s (sbox_56)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[56].s (sbox_57)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (sbox_58)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (sbox_59)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (sbox_60)         0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[24].s (sbox_61)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_62)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (sbox_63)          0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_64)          0.000    0.000 1.17e+06 1.17e-03   0.0
+    loop[9].er (encryptRound_5)           0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_38)                  0.000    0.000 1.48e+06 1.48e-03   0.1
+      m (mixColumns_5)                    0.000    0.000 4.44e+06 4.44e-03   0.2
+      r (shiftRows_5)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_5)                      0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_65)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (sbox_66)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[104].s (sbox_67)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_68)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[88].s (sbox_69)         0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[80].s (sbox_70)         0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[72].s (sbox_71)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (sbox_72)         0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[56].s (sbox_73)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (sbox_74)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (sbox_75)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_76)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (sbox_77)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[16].s (sbox_78)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (sbox_79)          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[0].s (sbox_80)          0.000    0.000 1.17e+06 1.17e-03   0.0
+    loop[8].er (encryptRound_6)           0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_39)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      m (mixColumns_6)                    0.000    0.000 4.49e+06 4.49e-03   0.2
+      r (shiftRows_6)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_6)                      0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_81)        0.000    0.000 1.12e+06 1.12e-03   0.0
+        sub_Bytes[112].s (sbox_82)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[104].s (sbox_83)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[96].s (sbox_84)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[88].s (sbox_85)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[80].s (sbox_86)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[72].s (sbox_87)         0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (sbox_88)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (sbox_89)         0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[48].s (sbox_90)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[40].s (sbox_91)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (sbox_92)         0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[24].s (sbox_93)         0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[16].s (sbox_94)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[8].s (sbox_95)          0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[0].s (sbox_96)          0.000    0.000 1.13e+06 1.13e-03   0.0
+    loop[7].er (encryptRound_7)           0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_40)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_7)                    0.000    0.000 4.42e+06 4.42e-03   0.2
+      r (shiftRows_7)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_7)                      0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_97)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (sbox_98)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[104].s (sbox_99)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (sbox_100)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (sbox_101)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[80].s (sbox_102)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[72].s (sbox_103)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[64].s (sbox_104)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[56].s (sbox_105)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[48].s (sbox_106)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[40].s (sbox_107)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_108)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[24].s (sbox_109)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (sbox_110)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (sbox_111)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (sbox_112)         0.000    0.000 1.18e+06 1.18e-03   0.0
+    loop[6].er (encryptRound_8)           0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_41)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      m (mixColumns_8)                    0.000    0.000 4.46e+06 4.46e-03   0.2
+      r (shiftRows_8)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_8)                      0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_113)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (sbox_114)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (sbox_115)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_116)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (sbox_117)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[80].s (sbox_118)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (sbox_119)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[64].s (sbox_120)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (sbox_121)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (sbox_122)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (sbox_123)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (sbox_124)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (sbox_125)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[16].s (sbox_126)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (sbox_127)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (sbox_128)         0.000    0.000 1.17e+06 1.17e-03   0.0
+    loop[5].er (encryptRound_9)           0.000    0.000 2.49e+07 2.49e-02   1.0
+      b (addRoundKey_42)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_9)                    0.000    0.000 4.52e+06 4.52e-03   0.2
+      r (shiftRows_9)                     0.000    0.000    0.000    0.000   0.0
+      s (subBytes_9)                      0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_129)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[112].s (sbox_130)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[104].s (sbox_131)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_132)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (sbox_133)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[80].s (sbox_134)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[72].s (sbox_135)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[64].s (sbox_136)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_137)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (sbox_138)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[40].s (sbox_139)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (sbox_140)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[24].s (sbox_141)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (sbox_142)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[8].s (sbox_143)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[0].s (sbox_144)         0.000    0.000 1.22e+06 1.22e-03   0.1
+    loop[4].er (encryptRound_10)          0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_43)                  0.000    0.000 1.43e+06 1.43e-03   0.1
+      m (mixColumns_10)                   0.000    0.000 4.44e+06 4.44e-03   0.2
+      r (shiftRows_10)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_10)                     0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_145)       0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[112].s (sbox_146)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (sbox_147)       0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[96].s (sbox_148)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (sbox_149)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[80].s (sbox_150)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[72].s (sbox_151)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[64].s (sbox_152)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[56].s (sbox_153)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (sbox_154)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (sbox_155)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[32].s (sbox_156)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[24].s (sbox_157)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_158)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (sbox_159)         0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[0].s (sbox_160)         0.000    0.000 1.15e+06 1.15e-03   0.0
+    loop[3].er (encryptRound_11)          0.000    0.000 2.49e+07 2.49e-02   1.0
+      b (addRoundKey_44)                  0.000    0.000 1.49e+06 1.49e-03   0.1
+      m (mixColumns_11)                   0.000    0.000 4.45e+06 4.45e-03   0.2
+      r (shiftRows_11)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_11)                     0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (sbox_161)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (sbox_162)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[104].s (sbox_163)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_164)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (sbox_165)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (sbox_166)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (sbox_167)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[64].s (sbox_168)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[56].s (sbox_169)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[48].s (sbox_170)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (sbox_171)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (sbox_172)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (sbox_173)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (sbox_174)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (sbox_175)         0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[0].s (sbox_176)         0.000    0.000 1.22e+06 1.22e-03   0.1
+    loop[2].er (encryptRound_12)          0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_45)                  0.000    0.000 1.44e+06 1.44e-03   0.1
+      m (mixColumns_12)                   0.000    0.000 4.37e+06 4.37e-03   0.2
+      r (shiftRows_12)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_12)                     0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_177)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (sbox_178)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (sbox_179)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (sbox_180)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[88].s (sbox_181)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (sbox_182)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[72].s (sbox_183)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (sbox_184)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_185)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[48].s (sbox_186)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[40].s (sbox_187)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[32].s (sbox_188)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (sbox_189)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (sbox_190)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[8].s (sbox_191)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[0].s (sbox_192)         0.000    0.000 1.18e+06 1.18e-03   0.0
+    loop[1].er (encryptRound_13)          0.000    0.000 2.54e+07 2.54e-02   1.1
+      b (addRoundKey_46)                  0.000    0.000 1.50e+06 1.50e-03   0.1
+      m (mixColumns_13)                   0.000    0.000 4.57e+06 4.57e-03   0.2
+      r (shiftRows_13)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_13)                     0.000    0.000 1.94e+07 1.94e-02   0.8
+        sub_Bytes[120].s (sbox_193)       0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (sbox_194)       0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[104].s (sbox_195)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_196)        0.000    0.000 1.25e+06 1.25e-03   0.1
+        sub_Bytes[88].s (sbox_197)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[80].s (sbox_198)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[72].s (sbox_199)        0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[64].s (sbox_200)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[56].s (sbox_201)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (sbox_202)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (sbox_203)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_204)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (sbox_205)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (sbox_206)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[8].s (sbox_207)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[0].s (sbox_208)         0.000    0.000 1.20e+06 1.20e-03   0.0
+    addrk1 (addRoundKey_74)               0.000    0.000 1.50e+06 1.50e-03   0.1
+    ke (keyExpansion_nk8_nr14_0)          0.000    0.000 9.51e+07 9.51e-02   4.0
+  b (AES_Encrypt_N192_Nr12_Nk6)           0.000    0.000 3.62e+08    0.362  15.1
+    addrk2 (addRoundKey_75)               0.000    0.000 1.49e+06 1.49e-03   0.1
+    sr (shiftRows_35)                     0.000    0.000    0.000    0.000   0.0
+    sb (subBytes_35)                      0.000    0.000 1.88e+07 1.88e-02   0.8
+      sub_Bytes[120].s (sbox_545)         0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[112].s (sbox_546)         0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[104].s (sbox_547)         0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[96].s (sbox_548)          0.000    0.000 1.17e+06 1.17e-03   0.0
+      sub_Bytes[88].s (sbox_549)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[80].s (sbox_550)          0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[72].s (sbox_551)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[64].s (sbox_552)          0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[56].s (sbox_553)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[48].s (sbox_554)          0.000    0.000 1.20e+06 1.20e-03   0.0
+      sub_Bytes[40].s (sbox_555)          0.000    0.000 1.16e+06 1.16e-03   0.0
+      sub_Bytes[32].s (sbox_556)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[24].s (sbox_557)          0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[16].s (sbox_558)          0.000    0.000 1.17e+06 1.17e-03   0.0
+      sub_Bytes[8].s (sbox_559)           0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[0].s (sbox_560)           0.000    0.000 1.17e+06 1.17e-03   0.0
+    loop[11].er (encryptRound_14)         0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_47)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      m (mixColumns_14)                   0.000    0.000 4.43e+06 4.43e-03   0.2
+      r (shiftRows_14)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_14)                     0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_209)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[112].s (sbox_210)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (sbox_211)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[96].s (sbox_212)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (sbox_213)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (sbox_214)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[72].s (sbox_215)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[64].s (sbox_216)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_217)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[48].s (sbox_218)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[40].s (sbox_219)        0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[32].s (sbox_220)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (sbox_221)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[16].s (sbox_222)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[8].s (sbox_223)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[0].s (sbox_224)         0.000    0.000 1.17e+06 1.17e-03   0.0
+    loop[10].er (encryptRound_15)         0.000    0.000 2.49e+07 2.49e-02   1.0
+      b (addRoundKey_48)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_15)                   0.000    0.000 4.55e+06 4.55e-03   0.2
+      r (shiftRows_15)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_15)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_225)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[112].s (sbox_226)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (sbox_227)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (sbox_228)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[88].s (sbox_229)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[80].s (sbox_230)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (sbox_231)        0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[64].s (sbox_232)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (sbox_233)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (sbox_234)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (sbox_235)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (sbox_236)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[24].s (sbox_237)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[16].s (sbox_238)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (sbox_239)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (sbox_240)         0.000    0.000 1.18e+06 1.18e-03   0.0
+    loop[9].er (encryptRound_16)          0.000    0.000 2.50e+07 2.50e-02   1.0
+      b (addRoundKey_49)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      m (mixColumns_16)                   0.000    0.000 4.56e+06 4.56e-03   0.2
+      r (shiftRows_16)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_16)                     0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (sbox_241)       0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[112].s (sbox_242)       0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[104].s (sbox_243)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_244)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[88].s (sbox_245)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (sbox_246)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (sbox_247)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (sbox_248)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[56].s (sbox_249)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[48].s (sbox_250)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (sbox_251)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[32].s (sbox_252)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[24].s (sbox_253)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[16].s (sbox_254)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[8].s (sbox_255)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[0].s (sbox_256)         0.000    0.000 1.21e+06 1.21e-03   0.1
+    loop[8].er (encryptRound_17)          0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_50)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      m (mixColumns_17)                   0.000    0.000 4.48e+06 4.48e-03   0.2
+      r (shiftRows_17)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_17)                     0.000    0.000 1.87e+07 1.87e-02   0.8
+        sub_Bytes[120].s (sbox_257)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (sbox_258)       0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[104].s (sbox_259)       0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[96].s (sbox_260)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[88].s (sbox_261)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[80].s (sbox_262)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (sbox_263)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (sbox_264)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (sbox_265)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (sbox_266)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (sbox_267)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (sbox_268)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[24].s (sbox_269)        0.000    0.000 1.12e+06 1.12e-03   0.0
+        sub_Bytes[16].s (sbox_270)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[8].s (sbox_271)         0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[0].s (sbox_272)         0.000    0.000 1.18e+06 1.18e-03   0.0
+    loop[7].er (encryptRound_18)          0.000    0.000 2.50e+07 2.50e-02   1.0
+      b (addRoundKey_51)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_18)                   0.000    0.000 4.55e+06 4.55e-03   0.2
+      r (shiftRows_18)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_18)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_273)       0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (sbox_274)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (sbox_275)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[96].s (sbox_276)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[88].s (sbox_277)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (sbox_278)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (sbox_279)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (sbox_280)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[56].s (sbox_281)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[48].s (sbox_282)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (sbox_283)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[32].s (sbox_284)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[24].s (sbox_285)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_286)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[8].s (sbox_287)         0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[0].s (sbox_288)         0.000    0.000 1.25e+06 1.25e-03   0.1
+    loop[6].er (encryptRound_19)          0.000    0.000 2.50e+07 2.50e-02   1.0
+      b (addRoundKey_52)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      m (mixColumns_19)                   0.000    0.000 4.50e+06 4.50e-03   0.2
+      r (shiftRows_19)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_19)                     0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (sbox_289)       0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (sbox_290)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[104].s (sbox_291)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_292)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[88].s (sbox_293)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (sbox_294)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[72].s (sbox_295)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[64].s (sbox_296)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_297)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (sbox_298)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[40].s (sbox_299)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[32].s (sbox_300)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (sbox_301)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[16].s (sbox_302)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[8].s (sbox_303)         0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[0].s (sbox_304)         0.000    0.000 1.21e+06 1.21e-03   0.1
+    loop[5].er (encryptRound_20)          0.000    0.000 2.50e+07 2.50e-02   1.0
+      b (addRoundKey_53)                  0.000    0.000 1.48e+06 1.48e-03   0.1
+      m (mixColumns_20)                   0.000    0.000 4.59e+06 4.59e-03   0.2
+      r (shiftRows_20)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_20)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_305)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[112].s (sbox_306)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[104].s (sbox_307)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (sbox_308)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[88].s (sbox_309)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[80].s (sbox_310)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (sbox_311)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[64].s (sbox_312)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[56].s (sbox_313)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (sbox_314)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[40].s (sbox_315)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (sbox_316)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (sbox_317)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_318)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (sbox_319)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_320)         0.000    0.000 1.20e+06 1.20e-03   0.1
+    loop[4].er (encryptRound_21)          0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_54)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      m (mixColumns_21)                   0.000    0.000 4.48e+06 4.48e-03   0.2
+      r (shiftRows_21)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_21)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_321)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[112].s (sbox_322)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (sbox_323)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[96].s (sbox_324)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (sbox_325)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[80].s (sbox_326)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[72].s (sbox_327)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (sbox_328)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_329)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[48].s (sbox_330)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[40].s (sbox_331)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_332)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[24].s (sbox_333)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_334)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (sbox_335)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_336)         0.000    0.000 1.16e+06 1.16e-03   0.0
+    loop[3].er (encryptRound_22)          0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_55)                  0.000    0.000 1.50e+06 1.50e-03   0.1
+      m (mixColumns_22)                   0.000    0.000 4.47e+06 4.47e-03   0.2
+      r (shiftRows_22)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_22)                     0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_337)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (sbox_338)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (sbox_339)       0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[96].s (sbox_340)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (sbox_341)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[80].s (sbox_342)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[72].s (sbox_343)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[64].s (sbox_344)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_345)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (sbox_346)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[40].s (sbox_347)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (sbox_348)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[24].s (sbox_349)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (sbox_350)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[8].s (sbox_351)         0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[0].s (sbox_352)         0.000    0.000 1.20e+06 1.20e-03   0.1
+    loop[2].er (encryptRound_23)          0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_56)                  0.000    0.000 1.44e+06 1.44e-03   0.1
+      m (mixColumns_23)                   0.000    0.000 4.49e+06 4.49e-03   0.2
+      r (shiftRows_23)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_23)                     0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_353)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (sbox_354)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (sbox_355)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (sbox_356)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[88].s (sbox_357)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[80].s (sbox_358)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[72].s (sbox_359)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (sbox_360)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_361)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[48].s (sbox_362)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[40].s (sbox_363)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (sbox_364)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[24].s (sbox_365)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[16].s (sbox_366)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (sbox_367)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (sbox_368)         0.000    0.000 1.20e+06 1.20e-03   0.0
+    loop[1].er (encryptRound_24)          0.000    0.000 2.54e+07 2.54e-02   1.1
+      b (addRoundKey_57)                  0.000    0.000 1.49e+06 1.49e-03   0.1
+      m (mixColumns_24)                   0.000    0.000 4.57e+06 4.57e-03   0.2
+      r (shiftRows_24)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_24)                     0.000    0.000 1.94e+07 1.94e-02   0.8
+        sub_Bytes[120].s (sbox_369)       0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (sbox_370)       0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[104].s (sbox_371)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_372)        0.000    0.000 1.25e+06 1.25e-03   0.1
+        sub_Bytes[88].s (sbox_373)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[80].s (sbox_374)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[72].s (sbox_375)        0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[64].s (sbox_376)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[56].s (sbox_377)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (sbox_378)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (sbox_379)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_380)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (sbox_381)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (sbox_382)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[8].s (sbox_383)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[0].s (sbox_384)         0.000    0.000 1.20e+06 1.20e-03   0.0
+    addrk1 (addRoundKey_76)               0.000    0.000 1.50e+06 1.50e-03   0.1
+    ke (keyExpansion_nk6_nr12_0)          0.000    0.000 6.58e+07 6.58e-02   2.7
+  a (AES_Encrypt)                         0.000    0.000 3.22e+08    0.322  13.4
+    addrk2 (addRoundKey_77)               0.000    0.000 1.47e+06 1.47e-03   0.1
+    sr (shiftRows_0)                      0.000    0.000    0.000    0.000   0.0
+    sb (subBytes_0)                       0.000    0.000 1.88e+07 1.88e-02   0.8
+      sub_Bytes[120].s (sbox_561)         0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[112].s (sbox_562)         0.000    0.000 1.15e+06 1.15e-03   0.0
+      sub_Bytes[104].s (sbox_563)         0.000    0.000 1.21e+06 1.21e-03   0.1
+      sub_Bytes[96].s (sbox_564)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[88].s (sbox_565)          0.000    0.000 1.19e+06 1.19e-03   0.0
+      sub_Bytes[80].s (sbox_566)          0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[72].s (sbox_567)          0.000    0.000 1.14e+06 1.14e-03   0.0
+      sub_Bytes[64].s (sbox_568)          0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[56].s (sbox_569)          0.000    0.000 1.18e+06 1.18e-03   0.0
+      sub_Bytes[48].s (sbox_570)          0.000    0.000 1.14e+06 1.14e-03   0.0
+      sub_Bytes[40].s (sbox_571)          0.000    0.000 1.15e+06 1.15e-03   0.0
+      sub_Bytes[32].s (sbox_572)          0.000    0.000 1.15e+06 1.15e-03   0.0
+      sub_Bytes[24].s (sbox_573)          0.000    0.000 1.17e+06 1.17e-03   0.0
+      sub_Bytes[16].s (sbox_574)          0.000    0.000 1.21e+06 1.21e-03   0.1
+      sub_Bytes[8].s (sbox_575)           0.000    0.000 1.17e+06 1.17e-03   0.0
+      sub_Bytes[0].s (sbox_0)             0.000    0.000 1.17e+06 1.17e-03   0.0
+    loop[9].er (encryptRound_25)          0.000    0.000 2.50e+07 2.50e-02   1.0
+      b (addRoundKey_58)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      m (mixColumns_25)                   0.000    0.000 4.51e+06 4.51e-03   0.2
+      r (shiftRows_25)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_25)                     0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (sbox_385)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[112].s (sbox_386)       0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[104].s (sbox_387)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[96].s (sbox_388)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (sbox_389)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (sbox_390)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (sbox_391)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[64].s (sbox_392)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[56].s (sbox_393)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[48].s (sbox_394)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (sbox_395)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[32].s (sbox_396)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[24].s (sbox_397)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_398)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[8].s (sbox_399)         0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[0].s (sbox_400)         0.000    0.000 1.19e+06 1.19e-03   0.0
+    loop[8].er (encryptRound_26)          0.000    0.000 2.49e+07 2.49e-02   1.0
+      b (addRoundKey_59)                  0.000    0.000 1.47e+06 1.47e-03   0.1
+      m (mixColumns_26)                   0.000    0.000 4.48e+06 4.48e-03   0.2
+      r (shiftRows_26)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_26)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_401)       0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[112].s (sbox_402)       0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[104].s (sbox_403)       0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[96].s (sbox_404)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[88].s (sbox_405)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (sbox_406)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (sbox_407)        0.000    0.000 1.25e+06 1.25e-03   0.1
+        sub_Bytes[64].s (sbox_408)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (sbox_409)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (sbox_410)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (sbox_411)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_412)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (sbox_413)        0.000    0.000 1.12e+06 1.12e-03   0.0
+        sub_Bytes[16].s (sbox_414)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (sbox_415)         0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[0].s (sbox_416)         0.000    0.000 1.21e+06 1.21e-03   0.1
+    loop[7].er (encryptRound_27)          0.000    0.000 2.49e+07 2.49e-02   1.0
+      b (addRoundKey_60)                  0.000    0.000 1.48e+06 1.48e-03   0.1
+      m (mixColumns_27)                   0.000    0.000 4.51e+06 4.51e-03   0.2
+      r (shiftRows_27)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_27)                     0.000    0.000 1.90e+07 1.90e-02   0.8
+        sub_Bytes[120].s (sbox_417)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[112].s (sbox_418)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (sbox_419)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_420)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[88].s (sbox_421)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (sbox_422)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (sbox_423)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[64].s (sbox_424)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[56].s (sbox_425)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[48].s (sbox_426)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (sbox_427)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_428)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[24].s (sbox_429)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (sbox_430)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[8].s (sbox_431)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_432)         0.000    0.000 1.21e+06 1.21e-03   0.1
+    loop[6].er (encryptRound_28)          0.000    0.000 2.47e+07 2.47e-02   1.0
+      b (addRoundKey_61)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_28)                   0.000    0.000 4.45e+06 4.45e-03   0.2
+      r (shiftRows_28)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_28)                     0.000    0.000 1.88e+07 1.88e-02   0.8
+        sub_Bytes[120].s (sbox_433)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (sbox_434)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[104].s (sbox_435)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[96].s (sbox_436)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[88].s (sbox_437)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[80].s (sbox_438)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[72].s (sbox_439)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (sbox_440)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[56].s (sbox_441)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[48].s (sbox_442)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[40].s (sbox_443)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[32].s (sbox_444)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (sbox_445)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[16].s (sbox_446)        0.000    0.000 1.13e+06 1.13e-03   0.0
+        sub_Bytes[8].s (sbox_447)         0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[0].s (sbox_448)         0.000    0.000 1.20e+06 1.20e-03   0.0
+    loop[5].er (encryptRound_29)          0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_62)                  0.000    0.000 1.44e+06 1.44e-03   0.1
+      m (mixColumns_29)                   0.000    0.000 4.46e+06 4.46e-03   0.2
+      r (shiftRows_29)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_29)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_449)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[112].s (sbox_450)       0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[104].s (sbox_451)       0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[96].s (sbox_452)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[88].s (sbox_453)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (sbox_454)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[72].s (sbox_455)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (sbox_456)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[56].s (sbox_457)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[48].s (sbox_458)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[40].s (sbox_459)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[32].s (sbox_460)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[24].s (sbox_461)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_462)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[8].s (sbox_463)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_464)         0.000    0.000 1.20e+06 1.20e-03   0.1
+    loop[4].er (encryptRound_30)          0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_63)                  0.000    0.000 1.43e+06 1.43e-03   0.1
+      m (mixColumns_30)                   0.000    0.000 4.49e+06 4.49e-03   0.2
+      r (shiftRows_30)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_30)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_465)       0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[112].s (sbox_466)       0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[104].s (sbox_467)       0.000    0.000 1.24e+06 1.24e-03   0.1
+        sub_Bytes[96].s (sbox_468)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[88].s (sbox_469)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[80].s (sbox_470)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[72].s (sbox_471)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[64].s (sbox_472)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[56].s (sbox_473)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[48].s (sbox_474)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[40].s (sbox_475)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[32].s (sbox_476)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[24].s (sbox_477)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[16].s (sbox_478)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (sbox_479)         0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[0].s (sbox_480)         0.000    0.000 1.20e+06 1.20e-03   0.1
+    loop[3].er (encryptRound_31)          0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_64)                  0.000    0.000 1.45e+06 1.45e-03   0.1
+      m (mixColumns_31)                   0.000    0.000 4.45e+06 4.45e-03   0.2
+      r (shiftRows_31)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_31)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_481)       0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[112].s (sbox_482)       0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[104].s (sbox_483)       0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[96].s (sbox_484)        0.000    0.000 1.14e+06 1.14e-03   0.0
+        sub_Bytes[88].s (sbox_485)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[80].s (sbox_486)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[72].s (sbox_487)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[64].s (sbox_488)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[56].s (sbox_489)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[48].s (sbox_490)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[40].s (sbox_491)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_492)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[24].s (sbox_493)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[16].s (sbox_494)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (sbox_495)         0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[0].s (sbox_496)         0.000    0.000 1.19e+06 1.19e-03   0.0
+    loop[2].er (encryptRound_32)          0.000    0.000 2.48e+07 2.48e-02   1.0
+      b (addRoundKey_65)                  0.000    0.000 1.46e+06 1.46e-03   0.1
+      m (mixColumns_32)                   0.000    0.000 4.44e+06 4.44e-03   0.2
+      r (shiftRows_32)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_32)                     0.000    0.000 1.89e+07 1.89e-02   0.8
+        sub_Bytes[120].s (sbox_497)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[112].s (sbox_498)       0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[104].s (sbox_499)       0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[96].s (sbox_500)        0.000    0.000 1.16e+06 1.16e-03   0.0
+        sub_Bytes[88].s (sbox_501)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[80].s (sbox_502)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[72].s (sbox_503)        0.000    0.000 1.17e+06 1.17e-03   0.0
+        sub_Bytes[64].s (sbox_504)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[56].s (sbox_505)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[48].s (sbox_506)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[40].s (sbox_507)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[32].s (sbox_508)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[24].s (sbox_509)        0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[16].s (sbox_510)        0.000    0.000 1.19e+06 1.19e-03   0.0
+        sub_Bytes[8].s (sbox_511)         0.000    0.000 1.15e+06 1.15e-03   0.0
+        sub_Bytes[0].s (sbox_512)         0.000    0.000 1.20e+06 1.20e-03   0.0
+    loop[1].er (encryptRound_0)           0.000    0.000 2.53e+07 2.53e-02   1.1
+      b (addRoundKey_66)                  0.000    0.000 1.42e+06 1.42e-03   0.1
+      m (mixColumns_0)                    0.000    0.000 4.57e+06 4.57e-03   0.2
+      r (shiftRows_33)                    0.000    0.000    0.000    0.000   0.0
+      s (subBytes_33)                     0.000    0.000 1.94e+07 1.94e-02   0.8
+        sub_Bytes[120].s (sbox_513)       0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[112].s (sbox_514)       0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[104].s (sbox_515)       0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[96].s (sbox_516)        0.000    0.000 1.25e+06 1.25e-03   0.1
+        sub_Bytes[88].s (sbox_517)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[80].s (sbox_518)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[72].s (sbox_519)        0.000    0.000 1.23e+06 1.23e-03   0.1
+        sub_Bytes[64].s (sbox_520)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[56].s (sbox_521)        0.000    0.000 1.21e+06 1.21e-03   0.1
+        sub_Bytes[48].s (sbox_522)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[40].s (sbox_523)        0.000    0.000 1.22e+06 1.22e-03   0.1
+        sub_Bytes[32].s (sbox_524)        0.000    0.000 1.20e+06 1.20e-03   0.0
+        sub_Bytes[24].s (sbox_525)        0.000    0.000 1.18e+06 1.18e-03   0.0
+        sub_Bytes[16].s (sbox_526)        0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[8].s (sbox_527)         0.000    0.000 1.20e+06 1.20e-03   0.1
+        sub_Bytes[0].s (sbox_528)         0.000    0.000 1.20e+06 1.20e-03   0.0
+    addrk1 (addRoundKey_0)                0.000    0.000 1.50e+06 1.50e-03   0.1
+    ke (keyExpansion_nk4_nr10_0)          0.000    0.000 7.58e+07 7.58e-02   3.2
+1
